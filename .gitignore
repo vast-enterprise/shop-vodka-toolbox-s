@@ -82,3 +82,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+
+target/
+shop-vodka-toolbox-s.go
+toolbox
