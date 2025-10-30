@@ -1,0 +1,14 @@
+Name: shop-vodka-toolbox-s
+Host: 0.0.0.0
+Port: 9745
+Timeout: 30000
+
+# Supabase配置（从环境变量读取或直接填写）
+Supabase:
+  Url: "https://stowyzscxwxyrxflhrup.supabase.co"
+  AnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0b3d5enNjeHd4eXJ4ZmxocnVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkxMzgyODksImV4cCI6MjA3NDcxNDI4OX0.vnVsZ7r1_xSSSbSGlyOlwDTbrnlFpbhESL1XfSmXY6U"
+  Bucket: "commerce"  # 需提前在Supabase创建存储桶
+  AuthToken: ""  # 私有桶需要填写JWT令牌
+
+# Rust可执行文件路径
+RustBinPath: "./bin/rust/gltf_opt_mac"
