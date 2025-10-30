@@ -3,6 +3,8 @@ Host: 0.0.0.0
 Port: 9745
 Timeout: 30000
 
+RequestAuthSecret: "32722B3A3EF7DB352FD4B2888C3EB4D8"
+
 # Supabase配置（从环境变量读取或直接填写）
 Supabase:
   Url: "https://stowyzscxwxyrxflhrup.supabase.co"

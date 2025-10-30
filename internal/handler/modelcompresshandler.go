@@ -21,6 +21,19 @@ func ModelCompressHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 			return
 		}
 
+		// 密钥验证
+		reqSecret := r.Header.Get("x-auth-secret")
+		if reqSecret == "" {
+			http.Error(w, "missing X-Auth-Secret header", http.StatusUnauthorized)
+			return
+		}
+
+		authSecret := svcCtx.Config.RequestAuthSecret
+		if reqSecret != authSecret {
+			http.Error(w, "invalid secret key", http.StatusUnauthorized)
+			return
+		}
+
 		l := logic.NewModelCompressHandlerLogic(r.Context(), svcCtx)
 		resp, err := l.Handle(&req, svcCtx)
 		if err != nil {

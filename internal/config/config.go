@@ -18,4 +18,7 @@ type Config struct {
 		Bucket    string `json:",env=SUPABASE_BUCKET"`
 		AuthToken string `json:",env=SUPABASE_AUTH_TOKEN"`
 	}
+
+	// 密钥验证
+	RequestAuthSecret string
 }
